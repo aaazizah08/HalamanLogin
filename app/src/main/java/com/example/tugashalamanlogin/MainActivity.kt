@@ -1,6 +1,8 @@
 package com.example.tugashalamanlogin
 
 import android.os.Bundle
+import android.widget.TextView
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val emailString = intent.getStringExtra("email") ?: ""
+        val halamanHome = findViewById<TextView>(R.id.HalamanHome)
+        halamanHome.text = "Hello World!"
+        Log.d("email", emailString)
     }
 }
